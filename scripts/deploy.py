@@ -2,6 +2,7 @@
 from traceback import print_tb
 from brownie import accounts, SimpleToken, DutchAuction
 
+
 def main():
     acct = accounts.load("deployment_account")
     token = SimpleToken.deploy({"from": acct})
