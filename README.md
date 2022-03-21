@@ -21,16 +21,16 @@ OpenZeppelin/openzeppelin-contracts@4.5.0 - To extend and create our SimpleToken
 
 ## Functionalities
 
-  // Contract call
-- function getTokenValue() public view returns (uint256)
+- function getTokenValue() public view returns (uint256) // Contract call
+
 Returns the asset value of this auction (i.e. how many tokens can this contract send to the winner)
 
-  // Contract call
-- function getUpdatedPrice() public view returns (uint256)
+- function getUpdatedPrice() public view returns (uint256) // Contract call
+
 Returns the current price of this auction
 
-  // Contract Tx
-- function bid() external payable
+- function bid() external payable // Contract Tx
+
 Allows bidders to make a bid. If the bid won the asset, transfer tokens to the bidder and ETH to the seller immediately
 
 <br>
