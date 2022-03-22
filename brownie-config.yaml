@@ -35,7 +35,6 @@ compiler:
             runs: 200
         remappings:
           - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.5.0'
-          - '@aion=ETH-Pantheon/Aion@1.0'
     vyper:
         version: null
 
@@ -49,7 +48,6 @@ console:
 reports:
     exclude_paths: null
     exclude_contracts:
-        # - SimpleToken
     only_include_project: true
 
 hypothesis:
@@ -67,5 +65,6 @@ hypothesis:
 autofetch_sources: false
 dependencies:
     - OpenZeppelin/openzeppelin-contracts@4.5.0
-    # - ETH-Pantheon/Aion@1.0
 dev_deployment_artifacts: false
+
+dotenv: .env 
