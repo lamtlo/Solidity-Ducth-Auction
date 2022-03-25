@@ -36,6 +36,7 @@ def test_bid_transfer_eth(auction, seller, bidder):
     current_price = auction.getUpdatedPrice()
     auction.bid({"from": bidder, "value": 1e9 + 1234})
 
+    auction.withdrawChange({"from": bidder})
     # Seller might receive and bidder might pay a little less eth due to marginal error of the update price
     assert seller.balance() in range(
         balance_before_seller + current_price,
@@ -72,7 +73,7 @@ def test_insufficient_eth(token, auction, seller, bidder):
     token_balance_seller = token.balanceOf(seller)
     token_balance_bidder = token.balanceOf(bidder)
 
-    with brownie.reverts("Not enough Ether provided."):
+    with brownie.reverts("Not enough ETH provided."):
         auction.bid({"from": bidder, "value": 9000})
 
     assert seller.balance() == balance_before_seller
