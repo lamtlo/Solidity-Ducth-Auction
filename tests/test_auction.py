@@ -1,6 +1,6 @@
 import pytest
 import brownie
-from brownie import chain, chain
+from brownie import chain
 from random import randint
 
 
